@@ -1,20 +1,18 @@
-""" URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+    用户模块的路由配置
+"""
+
+from django.urls import re_path
+
 from . import views
+
 urlpatterns = [
-    path('', views.IndexView.as_view()),
+    re_path(r'login/$', views.LoginView.as_view()),
+    re_path(r'mobile/(?P<mobile>1[3-9]\d{9})/$', views.MobileVerifyView.as_view()),
+    re_path(r'username/(?P<username>[a-zA-Z0-9_-]{4,16})/$', views.UserNameVerifyView.as_view()),
+    re_path(r'sms_code/$', views.SmsCodeView.as_view()),
+    re_path(r'register/$', views.UserRegisterView.as_view()),
+    re_path(r'^', views.IndexView.as_view()),
 ]
+
+
