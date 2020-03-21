@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
     <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.2.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href=" static/css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="../../static/css/style.default.css" id="theme-stylesheet">
   </head>
   <body>
     <div class="page login-page">
@@ -31,7 +31,7 @@
             <div class="col-lg-6 bg-white">
               <div class="form d-flex align-items-center">
                 <div class="content">
-                  <form method="post" action="login/" class="form-validate" id="loginFrom">{% csrf_token %}
+                  <form method="post" action="/account/signup/" class="form-validate" id="loginFrom">{% csrf_token %}
                     <div class="form-group">
                       <input id="login-username" type="text" name="username" required data-msg="请输入用户名" placeholder="请输入你的用户名" value="" class="input-material">
                     </div>
@@ -64,9 +64,9 @@
     <!-- JavaScript files-->
     <script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.2.1/bootstrap.min.js"></script>
-    <script src="static/js/jquery.validate.min.js"></script><!--表单验证-->
+    <script src="../../static/js/jquery.validate.min.js"></script><!--表单验证-->
     <!-- Main File-->
-    <script src="static/js/front.js"></script>
+    <script src="../../static/js/front.js"></script>
     <script>
     	$(function(){
     		/*判断上次是否勾选记住密码和自动登录*/
@@ -117,7 +117,7 @@
 	    			var passWord=$("#login-password").val();
 	    			$.ajax({
 	    				type:"post",
-	    				url:"http://localhost:8000/login/",
+	    				url:"http://localhost:8000",
 	    				data:{"userName":userName,"passWord":passWord},
 	    				async:true,
 	    				success:function(res){
