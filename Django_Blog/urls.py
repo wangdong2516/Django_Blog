@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('user.urls')),
+    path('account/', include('allauth.urls')),  # django-allauthurl配置
+    # path('', include(('blog.urls', 'blog'), namespace='blog')),
 ]

@@ -39,10 +39,9 @@
                     {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
                     {% endif %}
-                    <a class="secondaryAction" href="{% url 'account_reset_password' %}">忘记密码？</a>
-                    <button class="pull-right btn btn-info btn-sm rounded-0" type="submit">登录</button>
+                    <a class="secondaryAction" href="{% url 'account_login' %}">登录</a>
+                    <button class="pull-right btn btn-info btn-sm rounded-0" type="submit">注册</button>
                   </form>
-                  <small>没有账号?</small><a href="register.html" class="signup">&nbsp;注册</a>
                 </div>
               </div>
             </div>
