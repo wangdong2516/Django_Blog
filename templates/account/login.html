@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 {% load account socialaccount %}
 {% load crispy_forms_tags %}
 <!DOCTYPE html>
@@ -42,7 +43,6 @@
                     <a class="secondaryAction" href="{% url 'account_reset_password' %}">忘记密码？</a>
                     <button class="pull-right btn btn-info btn-sm rounded-0" type="submit">登录</button>
                   </form>
-                  <small>没有账号?</small><a href="register.html" class="signup">&nbsp;注册</a>
                 </div>
               </div>
             </div>

@@ -62,9 +62,15 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = 'http://www.baidu.com'
 # ACCOUNT_AUTHENTICATION_METHOD = 'username_email'的作用是当用户登录时，
 # 既可以使用用户名也可以使用email， 其他可选的值是'username'、'email'
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
-# # ACCOUNT_EMAIL_REQUIRED = True要求用户注册时必须填写email，默认False，email是选填的。
+ACCOUNT_EMAIL_VERIFICATION = os.getenv('IZONE_ACCOUNT_EMAIL_VERIFICATION', 'none')  # noqa
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+# 设置用户注册的时候必须填写邮箱地址
 ACCOUNT_EMAIL_REQUIRED = True
+# 登出直接退出，不用确认
+ACCOUNT_LOGOUT_ON_GET = True
+
+# 表单插件的配置
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # 分页相关配置，统一分页设置
 BASE_PAGE_BY = 10
