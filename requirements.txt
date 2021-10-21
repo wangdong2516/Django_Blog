@@ -1,7 +1,7 @@
 alabaster==0.7.12
 appdirs==1.4.3
 asgiref==3.2.3
-Babel==2.8.0
+Babel==2.9.1
 bootstrap-admin==0.4.3
 certifi==2019.11.28
 cfgv==3.1.0
