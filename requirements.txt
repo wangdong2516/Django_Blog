@@ -29,7 +29,7 @@ oauthlib==3.1.0
 packaging==20.3
 pre-commit==2.2.0
 Pygments==2.5.2
-PyJWT==1.7.1
+PyJWT==2.4.0
 pyparsing==2.4.6
 python3-openid==3.1.0
 pytz==2019.3
